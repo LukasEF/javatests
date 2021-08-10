@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package javatests;
 
 /**
@@ -10,12 +5,15 @@ package javatests;
  * @author Lukas
  */
 public class JavaTests {
-
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        System.out.println("Java Tests");
+        TestInterface[] interfaces = new TestInterface[2];
+        interfaces[0] = new TestImplementation1();
+        interfaces[1] = new TestImplementation2();
+        
+        for(int i=0; i<2; i++){
+            interfaces[i].print();
+        }
     }
     
 }
